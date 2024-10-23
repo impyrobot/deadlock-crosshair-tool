@@ -10,11 +10,10 @@
 }
 
 body {
-    background: rgb(2, 0, 36);
     background: linear-gradient(
         135deg,
-        rgba(2, 0, 36, 1) 25%,
-        rgba(35, 0, 41, 1) 50%,
-        rgba(0, 0, 0, 1) 75%
+        #001f3f 0%,    /* Navy Blue */
+        #003366 50%,   /* Darker Blue */
+        #000080 100%   /* Deep Navy */
     );
 }

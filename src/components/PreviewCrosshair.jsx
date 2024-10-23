@@ -3,10 +3,16 @@ export default function PreviewCrosshair({ crosshair }) {
     const dotColor = `rgba(${crosshair.colorR}, ${crosshair.colorG}, ${crosshair.colorB}, ${crosshair.dotOpacity})`;
     const showOutline = crosshair.linesBorder;
     const noWidthOrHeight = crosshair.linesWidth === 0 || crosshair.linesHeight === 0;
+    const isShotgun = crosshair.shotgun;
 
     const LINE_GAP_OFFSET = 28;
     const LINE_GAP_SIZE = 6;
-    const LINE_GAP = crosshair.linesGap * LINE_GAP_SIZE + LINE_GAP_OFFSET;
+
+    if (isShotgun) {
+        crosshair.linesGap += 9;
+    }
+
+    const LINE_GAP = crosshair.linesGap * LINE_GAP_SIZE + LINE_GAP_OFFSET 
 
     return (
         <div className="relative flex justify-center items-center">

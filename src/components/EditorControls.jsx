@@ -81,7 +81,7 @@ export default function EditorControls({ crosshair, handleInputChange }) {
                         value={crosshair.linesGap}
                         name="linesGap"
                         label="Gap"
-                        min={-3}
+                        min={-4}
                         max={20}
                         onSliderChange={handleInputChange}
                     />
@@ -121,6 +121,22 @@ export default function EditorControls({ crosshair, handleInputChange }) {
             </div>
             <div>
                 <div className="mb-2">
+                    <Switch
+                        color="default"
+                        defaultSelected={crosshair.isShotgun}
+                        onValueChange={(value) => handleInputChange(value, "linesGap")}
+                        // checked={isShotgunMode}
+                        // onChange={handleShotgunToggle}
+                    >
+                        Shotgun Mode
+                    </Switch>
+
+                    <div className=" p-2 rounded-lg">
+                    <p className="font-sans text-s">
+                        For Abrams, Shiv and Yamato
+                    </p>
+                    </div>
+
                     <Snippet
                         hideSymbol
                         variant="bordered"
